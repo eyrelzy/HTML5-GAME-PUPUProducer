@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>Poo Poo Producer Framework</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		
+		<script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="libs/soundjs-0.4.0.min.js"></script>
+		
+		<script type="text/javascript" src="libs/EventDispatcher.js"></script>
+		<script type="text/javascript" src="libs/AbstractLoader.js"></script>
+		
+		<script type="text/javascript" src="libs/LoadQueue.js"></script>
+		<script type="text/javascript" src="libs/TagLoader.js"></script>
+		<script type="text/javascript" src="libs/XHRLoader.js"></script>
+		
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript" src="js/variety.js"></script>
+		<script type="text/javascript" src="js/loadResources.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/getResources.js"></script>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript" src="js/button.js"></script>
+		
+		<script type="text/javascript" src="js/food.js"></script>
+		<script type="text/javascript" src="js/attack.js"></script>
+		
+		<script type="text/javascript" src="js/startGame.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+	</head>
+
+
+	<body id="mainBody" onload="init();">		
+		
+		<div id="mainMenu" class="scene">
+
+			<a href="javascript:void(0)" id="btnSound" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnHelp" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnPlay" class="btn">
+				&nbsp;</a>
+			
+		</div>
+
+		<div id="divTutor" class="scene">
+			<img id="imgTutor" src="assets/pic/tutor/1.png"></img>
+		</div>
+		
+
+
+		<div id= "dietChoosing" class="scene">
+			<a href="javascript:void(0)" id="btnReturn" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnEat" class="btn">
+				&nbsp;</a>
+			<div id="divInfo">
+				<p id="pInfo"></p>
+			</div>
+			<div id="divBreakfast" class="divDiet">
+				<table id="tableBreakfast" class="tableDiet">
+					<tbody>
+						<tr id="breakfast"></tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="divLunch" class="divDiet">
+				<table id="tableLunch" class="tableDiet">
+					<tbody>
+						<tr id="lunch"></tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="divSupper" class="divDiet">
+				<table id="tableSupper" class="tableDiet">
+					<tbody>
+						<tr id="supper"></tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div id="game" class="scene">
+			<canvas z-index="0" id="gameCanvas" width="1120px" height="630px"></canvas>
+
+			<div z-index="1" id="enzyme">
+				<table id="tableEnzyme">
+					<tbody>
+						<tr>
+							<td><img id="enzyme1" class="enzyme" src="assets/pic/enzyme/0.png"></td>
+							<td><img id="enzyme2" class="enzyme" src="assets/pic/enzyme/1.png"></td>
+							<td><img id="enzyme3" class="enzyme" src="assets/pic/enzyme/2.png"></td>
+							<td><img id="enzyme4" class="enzyme" src="assets/pic/enzyme/3.png"></td>
+							<td><img id="enzyme5" class="enzyme" src="assets/pic/enzyme/4.png"></td>
+							<td><img id="enzyme6" class="enzyme" src="assets/pic/enzyme/5.png"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="divEnzymeInfo">
+				<p id="pEnzymeInfo"></p>
+			</div>
+			<!-- <canvas id="gameCanvas" width="1280px" height="800px" onmousemove="P_overCanvas(event);"></canvas> -->
+			<!-- <img src="assets/pic/pause.png"> -->
+		</div>
+
+		<div id="pause" class="scene">
+			<a href="javascript:void(0)" id="btnContinue" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnReturnMenu" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnRestart" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnReChoose" class="btn">
+				&nbsp;</a>
+		</div>
+
+		<div id="failure" class="scene">
+			<a href="javascript:void(0)" id="btnReturnMenu" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnRestart" class="btn">
+				&nbsp;</a>
+			<a href="javascript:void(0)" id="btnReChoose" class="btn">
+				&nbsp;</a>
+			<img id="1number" class="number"></img>
+			<img id="2number" class="number"></img>
+			<img id="3number" class="number"></img>
+			<img id="4number" class="number"></img>
+			<img id="5number" class="number"></img>
+			<img id="6number" class="number"></img>
+			<img id="7number" class="number"></img>
+			<img id="8number" class="number"></img>
+		</div>
+
+		<div id="result" class="scene">
+				<img id="number1" class="number"></img>
+				<img id="number2" class="number"></img>
+				<img id="number3" class="number"></img>
+				<img id="number4" class="number"></img>
+				<div id="analysis">
+					<table id="divAnalysis">
+						<thead>
+							<tr>
+								<th>food A</th>
+								<th>food B</th>
+								<th>Is this diet reasonable?</th>
+								<th>reason</th>
+							</tr>
+						</thead>
+						<tbody id="tbodyAnalysis">
+						</tbody>
+					</table>
+				</div>
+				<a href="javascript:void(0)" id="btnConfirm" class="btn">
+				&nbsp;</a>
+		</div>
+
+		<div id="EnzymeFail" class="info"></div>
+
+		<div id="GameOver" class="info"></div>
+		
+
+	</body>
+</html>

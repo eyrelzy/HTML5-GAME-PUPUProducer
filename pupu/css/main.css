@@ -1,0 +1,337 @@
+/**
+*	For sth public
+*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, th, td, img, div{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body {
+	margin:  0px auto;
+	background: #c2ff68;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'Arial Unicode MS', Verdana, Arial, Helvetica, sans-serif;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+
+.scene{
+	display: block;
+	margin: 50px auto;
+	width: 1120px;
+	height: 630px;
+	background-repeat: no-repeat;
+}
+
+.divDiet{
+	padding-right: 10px;
+	margin-left:160px;
+	
+	width:895px;
+	height:165px;	
+
+	overflow-x:scroll;
+	overflow-y:hidden;
+}
+
+.tableDiet tr{
+	height: 150px;
+}
+
+.tableDiet td{
+	width: 500px;
+}
+
+#tableEnzyme tr{
+	height: 70px;
+}
+
+#tableEnzyme td{
+	width: 70px;
+}
+
+.tableDiet img{
+	width: 80px;
+	height: 80px;
+}
+
+.tableDiet img:hover{
+	width: 120px;
+	height: 120px;
+}
+
+.btn{
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+.number{
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 50px;
+}
+.enzyme{
+	display: block;
+	width: 70px;
+	height: 70px;
+}
+
+.info{
+	
+	width: 420px;
+	height: 210px;
+}
+/*#number1{
+	margin-left: 45px;
+	margin-top: 270px;
+}
+#number2{
+	margin-left: 145px;
+	margin-top: 270px;
+}
+#number3{
+	margin-left: 245px;
+	margin-top: 270px;
+}
+#number4{
+	margin-left: 345px;
+	margin-top: 270px;
+}*/
+/**
+*	for sth special
+*/
+
+#mainMenu{
+	background-repeat: repeat;
+	background-image: url(../assets/pic/background/menu.png);
+}
+
+#divTutor{
+	display: none;
+}
+
+#dietChoosing{
+	background-image: url(../assets/pic/background/diet.png);
+	padding-top:90px;
+}
+
+
+#divBreakfast{
+	height: 160px;
+}
+
+#divSupper{
+	height: 195px;
+}
+
+
+#game{
+	background-image: url(../assets/pic/background/game.png);
+}
+
+#gameCanvas{
+	position: absolute;
+}
+
+#enzyme{
+	display: none;
+	position: absolute;
+	width: 420px;
+	height: 70px;
+	background-image: url(../assets/pic/enzymechoicebox70x420.png);
+	background-repeat: no-repeat;
+}
+
+
+
+#pause{
+	display: none;
+	//position: absolute;
+	width: 420px;
+	height: 490px;
+	padding-top:90px;
+	margin-top: -600px ;
+	//margin-left: 400px;
+	background-image: url(../assets/pic/background/pause.png);
+	background-repeat: no-repeat;
+}
+
+
+#failure{
+	display: none;
+	//position: absolute;
+	width: 420px;
+	height: 590px;
+	padding-top:90px;
+	margin-top: -600px;
+	//margin-left: 400px;
+	background-image: url(../assets/pic/background/ending.png);
+	background-repeat: no-repeat;
+}
+
+#result{
+	display: none;
+	width: 700px;
+	height: 490px;
+	padding-top:90px;
+	margin-top: 150px;
+	margin-left: 310px;
+	background-image: url(../assets/pic/background/result.png);
+	background-repeat: no-repeat;
+}
+
+
+#analysis{
+	display: none;
+	//position: absolute;
+	width: 300px;
+	height: 350px;
+	margin-top: 600px;
+	margin-left: 20px;
+	overflow-x:scroll;
+	overflow-y:scroll;
+}
+
+#EnzymeFail{
+	display: none;
+	position: absolute;
+	width: 420px;
+	height: 210px;
+	margin-left: 440px;
+	margin-top: -500px;
+	background-image: url(../assets/pic/background/message.png);
+	background-repeat: no-repeat;
+}
+#GameOver{
+	display: none;
+	position: absolute;
+	width: 420px;
+	height: 210px;
+	margin-left: 440px;
+	margin-top: -500px;
+	background-image: url(../assets/pic/background/gameover.png);
+	background-repeat: no-repeat;
+}
+
+/*
+#divNumber{
+	display: none;
+	width: 325px;
+	height: 70px;
+}*/
+
+
+
+
+
+#btnSound{
+	width: 70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/on.png);
+}
+#btnSound:hover{
+	//background-image: url(../assets/pic/button/on2.png);
+}
+
+#btnHelp{
+	width:70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/help.png);
+}
+#btnHelp:hover{
+	background-image: url(../assets/pic/button/help2.png);
+}
+
+#btnPlay{
+	width: 220px;
+	height: 110px;
+	background-image: url(../assets/pic/button/play.png);
+}
+#btnPlay:hover{
+	background-image: url(../assets/pic/button/play2.png);
+}
+
+
+#btnReturn{
+	width: 70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/back.png);
+	
+}
+#btnReturn:hover{
+	background-image: url(../assets/pic/button/back2.png);
+}
+
+#btnEat{
+	width: 200px;
+	height: 100px;
+	background-image: url(../assets/pic/button/next.png);
+}
+#btnEat:hover{
+	background-image: url(../assets/pic/button/next2.png);
+}
+
+#btnConfirm{
+	width:220px;
+	height: 80px;
+	//margin-left: 395px;
+	//margin-top: 345px;
+	margin-left: 395px;
+	margin-top: -100px;
+	background-image: url(../assets/pic/button/Cnext.png);
+}
+#btnConfirm:hover{
+	background-image: url(../assets/pic/button/Cnext2.png);
+}
+
+#btnContinue{
+	margin-left: 300px;
+	margin-top: 270px;
+	width: 70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/resume.png);
+}
+#btnContinue:hover{
+	background-image: url(../assets/pic/button/resume2.png);
+}
+
+#btnReturnMenu{
+	width: 70px;
+	height: 70px;
+	margin-left: 170px;
+	margin-top: 270px;
+	background-image: url(../assets/pic/button/menu.png);
+}
+#btnReturnMenu:hover{
+	background-image: url(../assets/pic/button/menu2.png);
+}
+
+#btnRestart{
+	margin-left: 70px;
+	margin-top: 270px;
+	width: 70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/replay.png);
+}
+#btnRestart:hover{
+	background-image: url(../assets/pic/button/replay2.png);
+}
+
+#btnReChoose{
+	margin-left: 270px;
+	margin-top: 270px;
+	width: 70px;
+	height: 70px;
+	background-image: url(../assets/pic/button/recipes.png);
+}
+#btnReChoose:hover{
+	background-image: url(../assets/pic/button/recipes2.png);
+}
+
